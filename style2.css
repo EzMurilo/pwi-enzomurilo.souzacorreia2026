@@ -1,0 +1,38 @@
+ body {
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: black;
+            color: white;
+        }
+        .texto {
+            color: white;
+        }
+        .titulos{
+            background-color: darkblue;
+            color: white;
+            padding: 10px;
+            margin: auto;
+            width: 500px;
+            text-align: center;
+            font-size: large;
+            margin-bottom: 30px;
+            
+        }
+        .botao-github {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #24292e; /* Cor clássica do GitHub */
+    color: white;
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    border-radius: 5px; /* Bordas levemente arredondadas */
+    margin: 20px 0;
+    transition: background-color 0.3s; /* Efeito suave ao passar o mouse */
+}
+
+/* Efeito quando você passa o mouse por cima */
+.botao-github:hover {
+    background-color: #444d56;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
