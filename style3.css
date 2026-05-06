@@ -1,0 +1,71 @@
+/* 1. DECLARAÇÃO DE VARIÁVEIS (Painel de Controle) */
+:root {
+    /* Cores da Paleta "Floresta" */
+    --cor-topo: #2D6A4F;            /* Verde Floresta */
+    --cor-lateral: #1B4332;         /* Verde Musgo */
+    --cor-texto-lateral: #95D5B2;   /* Verde Água (Título do Menu) */
+    --cor-texto-padrao: white;
+    --cor-hover-link: rgb(168, 245, 104); /* Verde Limão para destaque */
+    --cor-borda: #333;
+
+    /* Medidas */
+    --altura-topo: 80px;
+    --largura-lateral: 250px;
+}
+
+/* setando as marcações da pagina */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*instruções para o site todo(meu site)*/
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; 
+}
+/*class da div do desmatamento*/
+.titulo {
+    background-color: var(--cor-topo);
+    color: var(--cor-texto-padrao);
+    padding: 20px;
+    height: var(--altura-topo); 
+    flex-shrink: 0; /* Impede de amassar o topo */
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+    width: 100%;
+}
+
+.divisoria {
+    background-color: var(--cor-lateral);
+    color: var(--cor-texto-lateral); /* Aplica a cor Verde Água no <h2> */
+    width: var(--largura-lateral);
+    padding: 20px;
+    flex-shrink: 0;
+}
+
+.linha_link {
+    display: block;
+    color: var(--cor-texto-padrao);
+    text-decoration: none;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--cor-borda);
+    font-size: 18px;
+}
+
+.linha_link:hover {
+    color: var(--cor-hover-link);
+}
+
+.janela {
+    flex: 1; 
+    border: none;
+    width: 100%;
+    height: 100%;
+}
