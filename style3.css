@@ -69,3 +69,53 @@ body {
     width: 100%;
     height: 100%;
 }
+
+
+/* para baixo ta o css do home.html*/
+
+.container-video{
+    padding: 50px;
+}
+
+/*media queries abaixo(usei IA porque é um saco mexer com isso ja que no meu codigo tem iframe tudo é mais dificil)*/
+
+/* --- IMPLEMENTAÇÃO DE MEDIA QUERIES --- */
+
+/* 768px é o padrão para tablets e celulares grandes */
+@media screen and (max-width: 768px) {
+    
+    body {
+        overflow: auto; /* Permite rolar a página inteira no celular */
+    }
+
+    .main-content {
+        flex-direction: column; /* Coloca o menu em cima e o conteúdo embaixo */
+    }
+
+    .divisoria {
+        width: 100%; /* O menu ocupa a largura toda da tela */
+        height: auto; /* Altura cresce conforme o número de links */
+        padding: 10px;
+    }
+
+    .titulo {
+        height: auto; /* O topo se ajusta ao tamanho do texto */
+        text-align: center;
+    }
+
+    /* Ajuste para o conteúdo que está dentro do home3.html (via iframe) */
+    .container-video {
+        padding: 20px; /* Diminui o recuo para sobrar mais espaço para o vídeo */
+        text-align: center;
+    }
+
+    .container-video iframe {
+        width: 100%; /* O vídeo do YouTube passa a ocupar 100% da largura do celular */
+        height: auto; 
+        aspect-ratio: 16 / 9; /* Mantém o formato retangular do vídeo */
+    }
+
+    .janela {
+        height: 600px; /* Define uma altura mínima para o iframe não sumir */
+    }
+}
