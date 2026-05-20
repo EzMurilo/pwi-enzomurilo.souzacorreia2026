@@ -1,12 +1,11 @@
-/* 1. DECLARAÇÃO DE VARIÁVEIS (Painel de Controle) */
 :root {
-    /* Cores da Paleta "Floresta" */
     --cor-topo: #2D6A4F;            /* Verde Floresta */
     --cor-lateral: #1B4332;         /* Verde Musgo */
     --cor-texto-lateral: #95D5B2;   /* Verde Água (Título do Menu) */
     --cor-texto-padrao: white;
     --cor-hover-link: rgb(168, 245, 104); /* Verde Limão para destaque */
-    --cor-borda: #333;
+    --cor-borda: #333; /*cor do sublinhado link*/
+    --cor-tempo: #2D6A4F; /*cor do antes e depois*/
 
     /* Medidas */
     --altura-topo: 80px;
@@ -44,7 +43,7 @@ body {
 
 .divisoria {
     background-color: var(--cor-lateral);
-    color: var(--cor-texto-lateral); /* Aplica a cor Verde Água no <h2> */
+    color: var(--cor-texto-lateral); 
     width: var(--largura-lateral);
     padding: 20px;
     flex-shrink: 0;
@@ -76,6 +75,16 @@ body {
 .container-video{
     padding: 50px;
 }
+
+.novidades{
+padding: 50px;
+}
+.email{
+    padding: ;
+}
+
+
+
 
 /*media queries abaixo(usei IA porque é um saco mexer com isso ja que no meu codigo tem iframe tudo é mais dificil)*/
 
