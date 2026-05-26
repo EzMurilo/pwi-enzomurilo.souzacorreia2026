@@ -5,14 +5,13 @@
     --cor-texto-padrao: white;
     --cor-hover-link: rgb(168, 245, 104); /* Verde Limão para destaque */
     --cor-borda: #333; /*cor do sublinhado link*/
-    --cor-tempo: #2D6A4F; /*cor do antes e depois*/
+    
 
     /* Medidas */
     --altura-topo: 80px;
     --largura-lateral: 250px;
 }
 
-/* setando as marcações da pagina */
 * {
     margin: 0;
     padding: 0;
@@ -80,15 +79,7 @@ body {
 padding: 50px;
 }
 .email{
-    padding: ;
-}
-
-
-
-
-/*media queries abaixo(usei IA porque é um saco mexer com isso ja que no meu codigo tem iframe tudo é mais dificil)*/
-
-/* --- IMPLEMENTAÇÃO DE MEDIA QUERIES --- */
+};
 
 /* 768px é o padrão para tablets e celulares grandes */
 @media screen and (max-width: 768px) {
