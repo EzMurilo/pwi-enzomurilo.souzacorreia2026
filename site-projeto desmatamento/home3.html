@@ -4,36 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style3.css">
-    <title>Document</title>
+    <title>Home Conteúdo</title>
 </head>
-<body>
-    <div class="container-video">
-        <h1>video que retrata a evolução do desmatamento    <br> <br></h1>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/zkQu0QNcWjA?si=XtPhXoW4CodUHGYn" title="YouTube video player" 
-        frameborder="0" allow="accelerometer;
-         autoplay; clipboard-write; encrypted-media;
-          gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<form>
-    <label><small>Quanto voce gostou deste video?</small></label>
-    <br>
-    <br>
-    <input type="range" min="0" max="1000">
-</form>
+<body class="conteudo-interno">
+
+    <div class="conteudo-principal-topo">
+        <div class="container-video">
+            <h1>Vídeo que retrata a evolução do desmatamento<br><br></h1>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/zkQu0QNcWjA?si=XtPhXoW4CodUHGYn" title="YouTube video player" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            
+            <form>
+                <br>
+                <label><small>Quanto você gostou deste vídeo?</small></label>
+                <br><br>
+                <input type="range" min="0" max="1000">
+            </form>
+        </div>
+
+        <div class="spotify-lateral">
+            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/5MXrd9RwpBy9Z07ygFwd25?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
     </div>
-<div class="novidades">
-    <h3 >informe seu email caso queira receber novidades</h3>
-    
-    <br>
-    <form action="#" method="post">
-        
+
+    <div class="novidades">
+        <h3>Informe seu e-mail caso queira receber novidades</h3>
+        <br>
+        <form action="#" method="post">
             <label for="email">E-mail</label>
             <input type="email" id="email" name="email" placeholder="seu@email.com" required>
-            <br>
-            <br>
+            <br><br>
             <input type="checkbox" id="receber" name="receber">
-            <label for="receber">voce deseja resceber atualizações das instituições?</label>
+            <label for="receber">Você deseja receber atualizações das instituições?</label>
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer_box">
+        <h3>Localização da ONG (Greenpeace Brasil)</h3>
+        <br>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.447551717387!2d-46.64332922384351!3d-23.552367178807094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce590b5a19cb29%3A0x6b107e38202b2ef6!2sGreenpeace%20Brasil!5e0!3m2!1spt-BR!2sbr!4v1716768000000!5m2!1spt-BR!2sbr" 
+            width="100%" 
+            height="300" 
+            style="border:0; border-radius: 8px;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
         </div>
-        
-    </form>
+     </footer>
+
 </body>
 </html>

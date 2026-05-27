@@ -1,13 +1,11 @@
 :root {
     --cor-topo: #2D6A4F;            /* Verde Floresta */
     --cor-lateral: #1B4332;         /* Verde Musgo */
-    --cor-texto-lateral: #95D5B2;   /* Verde Água (Título do Menu) */
+    --cor-texto-lateral: #95D5B2;   /* Verde Água */
     --cor-texto-padrao: white;
-    --cor-hover-link: rgb(168, 245, 104); /* Verde Limão para destaque */
-    --cor-borda: #333; /*cor do sublinhado link*/
+    --cor-hover-link: rgb(168, 245, 104); 
+    --cor-borda: #333; 
     
-
-    /* Medidas */
     --altura-topo: 80px;
     --largura-lateral: 250px;
 }
@@ -17,7 +15,8 @@
     padding: 0;
     box-sizing: border-box;
 }
-/*instruções para o site todo(meu site)*/
+
+/* CSS do site principal (index.html) - TRAVA A TELA */
 body {
     font-family: Arial, sans-serif;
     height: 100vh;
@@ -25,12 +24,33 @@ body {
     flex-direction: column;
     overflow: hidden; 
 }
-/*class da div do desmatamento*/
+
+/* NOVIDADE: CSS exclusivo para a página de dentro (home3.html) - LIBERA A ROLAGEM */
+body.conteudo-interno {
+    height: auto;
+    overflow-y: auto; /* Permite rolar para baixo para ver o mapa */
+    overflow-x: hidden;
+    background-color: #ffffff; /* Ou a cor de fundo que preferir */
+}
+
+/* Estilo para o Rodapé do Mapa */
+footer {
+    width: 100%;
+    padding: 50px;
+    background-color: #f4f4f4;
+    margin-top: 50px;
+}
+
+footer h3 {
+    color: #1B4332;
+}
+
+/* Mantém o resto do seu CSS igual daqui para baixo... */
 .titulo {
     background-color: var(--cor-topo);
     color: var(--cor-texto-padrao);
     padding: 20px;
-    height: var(--altura-topo); 
+    height: var(--altura-topo);
     flex-shrink: 0; /* Impede de amassar o topo */
 }
 
@@ -38,6 +58,14 @@ body {
     display: flex;
     flex: 1;
     width: 100%;
+    height: calc(100vh - var(--altura-topo)); /* Garante que o container ocupe toda a altura abaixo do topo */
+}
+.janela {
+    flex: 1;           /* Faz o iframe esticar e ocupar TODO o espaço restante ao lado do menu */
+    border: none;
+    width: 100%;
+    height: 100%;      /* Força o iframe a usar 100% da altura do main-content */
+    display: block;    /* Remove comportamentos estranhos de elementos inline */
 }
 
 .divisoria {
@@ -61,18 +89,42 @@ body {
     color: var(--cor-hover-link);
 }
 
-.janela {
-    flex: 1; 
-    border: none;
-    width: 100%;
-    height: 100%;
-}
-
-
 /* para baixo ta o css do home.html*/
 
 .container-video{
     padding: 50px;
+}
+
+.conteudo-principal-topo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px; /* Dá um espaço confortável entre o vídeo e o Spotify */
+    width: 100%;
+}
+
+/* Ajusta o espaçamento do Spotify na lateral */
+.spotify-lateral {
+    padding-top: 120px; /* Empurra o player um pouco para baixo para alinhar com o topo do vídeo */
+    flex-shrink: 0;
+    background-color: white;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    height: auto;
+    padding: 50px;
+    margin: 50px;
+    border-radius: 20px;
+}
+.footer_box{
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px black;
+}
+
+/* Remove o padding exagerado do container do vídeo para eles não brigarem por espaço */
+.container-video {
+    padding: 50px 0px 50px 50px; /* Mantém o espaço na esquerda, topo e baixo, mas tira da direita */
 }
 
 .novidades{
@@ -118,4 +170,25 @@ padding: 50px;
     .janela {
         height: 600px; /* Define uma altura mínima para o iframe não sumir */
     }
+    .conteudo-principal-topo {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .container-video {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .spotify-lateral {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+footer {
+    width: 100%;
+    padding: 20px;
+    background-color: #f4f4f4; /* Uma cor de fundo leve para destacar o rodapé */
+    margin-top: 40px;
+    flex-shrink: 0;
 }

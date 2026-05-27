@@ -1,99 +1,26 @@
-/* Reset básico de estilos */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box; 
+    font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-    background: linear-gradient(135deg, #7159c1, #9b51e0);
-    height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* CORRIGIDO: Alinha na horizontal */
+    align-items: center;     /* Alinha na vertical */
+    min-height: 100vh;       /* O pai ocupa a tela inteira */
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
 }
 
-/* Caixa do Login */
-.login-container {
-    background-color: #ffffff;
+.login-box {
+    background-color: white;
     padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 20px 15px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    max-width: 400px;
-}
-
-.login-container h2 {
+    border-radius: 12px;
     text-align: center;
-    margin-bottom: 24px;
-    color: #333;
-}
-
-/* Campos de Entrada */
-.input-group {
-    margin-bottom: 20px;
-}
-
-.input-group label {
-    display: block;
-    margin-bottom: 8px;
-    color: #666;
-    font-size: 14px;
-}
-
-.input-group input {
+    
+    /* REMOVIDO: O display: flex e o 100vh saíram daqui */
+    /* OPCIONAL: Você pode definir uma largura máxima para ela não esticar */
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    outline: none;
-    transition: border-color 0.3s;
-}
-
-.input-group input:focus {
-    border-color: #7159c1;
-}
-
-/* Links e Ações */
-.actions {
-    margin-bottom: 20px;
-    text-align: right;
-}
-
-.actions a, .signup-text a {
-    color: #7159c1;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.actions a:hover, .signup-text a:hover {
-    text-decoration: underline;
-}
-
-/* Botão */
-.btn-login {
-    width: 100%;
-    padding: 12px;
-    background-color: #7159c1;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.btn-login:hover {
-    background-color: #5a43a8;
-}
-
-/* Texto de Cadastro */
-.signup-text {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
-    color: #666;
+    max-width: 400px; 
 }
