@@ -5,6 +5,7 @@
     --cor-texto-padrao: white;
     --cor-hover-link: rgb(168, 245, 104); 
     --cor-borda: #333; 
+    --cor-rodape: #f4f4f4;
     
     --altura-topo: 80px;
     --largura-lateral: 250px;
@@ -25,33 +26,48 @@ body {
     overflow: hidden; 
 }
 
-/* NOVIDADE: CSS exclusivo para a página de dentro (home3.html) - LIBERA A ROLAGEM */
+
 body.conteudo-interno {
     height: auto;
     overflow-y: auto; /* Permite rolar para baixo para ver o mapa */
     overflow-x: hidden;
-    background-color: #ffffff; /* Ou a cor de fundo que preferir */
+    background-color: var(--cor-texto-padrao);
 }
 
 /* Estilo para o Rodapé do Mapa */
 footer {
     width: 100%;
     padding: 50px;
-    background-color: #f4f4f4;
+    background-color: var(--cor-texto-padrao);
     margin-top: 50px;
 }
 
 footer h3 {
     color: #1B4332;
 }
+.botao{
+    padding: 5px 15px;
+    margin-left: 15px;
+    background-color: var(--cor-lateral); /* Invertei a cor para dar destaque */
+    color: var(--cor-texto-padrao);
+    border: 1px solid var(--cor-texto-padrao);
+    border-radius: 5px;
+    cursor: pointer; /* Faz o ponteiro do mouse mudar ao passar por cima */
+    font-weight: bold;
+}
+.escondido{
+    display: none !important;
+}
 
-/* Mantém o resto do seu CSS igual daqui para baixo... */
 .titulo {
     background-color: var(--cor-topo);
     color: var(--cor-texto-padrao);
     padding: 20px;
     height: var(--altura-topo);
     flex-shrink: 0; /* Impede de amassar o topo */
+    display: flex;
+    justify-content: space-between; /* Joga o título pra esquerda e botão pra direita */
+    align-items: center;
 }
 
 .main-content {
@@ -107,7 +123,7 @@ footer h3 {
 .spotify-lateral {
     padding-top: 120px; /* Empurra o player um pouco para baixo para alinhar com o topo do vídeo */
     flex-shrink: 0;
-    background-color: white;
+    background-color: var(--cor-rodape);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
     height: auto;
     padding: 50px;
@@ -188,7 +204,7 @@ padding: 50px;
 footer {
     width: 100%;
     padding: 20px;
-    background-color: #f4f4f4; /* Uma cor de fundo leve para destacar o rodapé */
+    background-color: var(--cor-rodape);
     margin-top: 40px;
     flex-shrink: 0;
 }
